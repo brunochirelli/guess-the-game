@@ -1,7 +1,6 @@
 import React from "react";
 
-export const createGrid = () => {
-  let guess = 50;
+export const createGrid = (gameArea) => {
   let start = 1;
   let end = 100;
   let grid = [];
@@ -14,11 +13,9 @@ export const createGrid = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "9vw",
-          height: "9vw",
+          width: gameArea / 10,
+          height: gameArea / 10,
           border: "1px solid gray",
-
-          opacity: start <= guess ? "0.3" : "1",
         }}
       >
         {start}
@@ -27,5 +24,5 @@ export const createGrid = () => {
     start++;
   }
 
-  return grid;
+  return <>{createGrid(gameArea)}</>;
 };
