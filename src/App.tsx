@@ -1,21 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Welcome from "./components/game/Welcome";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import NotFound from "./components/layout/404";
+import Game from "./components/game/Game";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/" render={Welcome} />
-          <Route path="*" render={NotFound} />
+          <Route exact path="/">
+            <Game />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
         </Switch>
       </Layout>
     </Router>
   );
-}
+};
 
 export default App;
