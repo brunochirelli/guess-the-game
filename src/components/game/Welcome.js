@@ -14,7 +14,8 @@ const Welcome = () => {
           <p>
             Let's play a game. I will guess your number from 1 to 100 in a
             maximum of 7 attempts. Choose your number now. Only respond if your
-            number is higher or lower from my guess.
+            number is <strong>higher</strong> or <strong>lower</strong> from my
+            guess.
           </p>
           <br></br>
         </Col>
